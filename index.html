@@ -159,6 +159,24 @@
     .btn-send { background: var(--accent); color: #fff; border: none; padding: 12px 36px; font-size: 15px; font-family: 'Raleway',sans-serif; font-weight: 600; border-radius: 4px; cursor: pointer; transition: background 0.2s; }
     .btn-send:hover { background: var(--accent-hover); }
 
+
+
+    
+    /* PHOTO GALLERY LIGHTBOX */
+    #gallery-modal { display: none; position: fixed; inset: 0; background: rgba(4,11,20,0.92); z-index: 10000; align-items: center; justify-content: center; padding: 40px; }
+    #gallery-modal.open { display: flex; }
+    .gallery-inner { position: relative; max-width: 900px; width: 100%; text-align: center; }
+    .gallery-inner img { max-width: 100%; max-height: 75vh; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+    .gallery-close { position: absolute; top: -42px; right: 0; color: #fff; font-size: 28px; background: none; border: none; cursor: pointer; line-height: 1; }
+    .gallery-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); border: none; color: #fff; font-size: 22px; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    .gallery-nav:hover { background: var(--accent); }
+    .gallery-prev { left: -22px; }
+    .gallery-next { right: -22px; }
+    @media(max-width:700px){ .gallery-prev{left:4px} .gallery-next{right:4px} #gallery-modal{padding:16px} }
+    .gallery-counter { color: var(--text-light); font-size: 13px; margin-top: 14px; font-family: 'Poppins',sans-serif; }
+    .gallery-empty { color: #fff; font-family: 'Raleway',sans-serif; font-size: 16px; }
+
+
     /* FOOTER */
     footer { background: var(--sidebar-bg); color: var(--text-light); text-align: center; padding: 28px 20px; font-size: 14px; }
     footer a { color: var(--accent); text-decoration: none; }
@@ -229,11 +247,11 @@
           <li><strong>LinkedIn:</strong>linkedin.com/in/zakemohammad</li>
           <li><strong>Freelance:</strong>Available</li>
         </ul>
-        <div class="stats-row">
-          <div class="stat-box"><span class="num">14</span><span class="lbl">Projects</span></div>
-          <div class="stat-box"><span class="num">1.5<small style="font-size:15px">yr</small></span><span class="lbl">Experience</span></div>
+      <div class="stats-row">
+          <div class="stat-box"><span class="num">16</span><span class="lbl">Projects</span></div>
+          <div class="stat-box"><span class="num">1.8<small style="font-size:15px">yr</small></span><span class="lbl">Experience</span></div>
           <div class="stat-box"><span class="num">2</span><span class="lbl">Companies</span></div>
-          <div class="stat-box"><span class="num">7</span><span class="lbl">Courses</span></div>
+          <div class="stat-box"><span class="num">9</span><span class="lbl">Courses</span></div>
         </div>
       </div>
     </div>    
@@ -270,7 +288,7 @@
   <section id="resume">
     <div class="section-title">
       <h2>Resume</h2>
-      <p>My education and professional experience. <a class="btn-down period" href="/CV/CV2.pdf" download>Download</a> </p>
+      <p>My education and professional experience. <a class="btn-down period" href="/CV/CV_.pdf" download>Download</a> </p>
     </div>
     <div class="resume-cols">
       <div class="resume-col">
@@ -320,15 +338,75 @@
       <p>A selection of things I've built — from distributed platforms to desktop apps.</p>
     </div>
     <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <div class="card-icon" style="background:#e8f5fd">⚙️</div>
+
+   <div class="portfolio-card">
+        <div class="card-icon" style="background:#e8f0fd">
+          <img class="card-thumb" src="" alt="" onerror="this.style.display='none'">
+          🏋️</div>
         <div class="card-body">
-          <h4>JobFlow</h4>
-          <span class="card-type">Distributed Job Processing Platform</span>
-          <p>Microservices with .NET 10 & RabbitMQ for async job processing. Live SignalR dashboard. Full Docker + PostgreSQL deployment.</p>
-          <div class="card-tags"><span>.NET 10</span><span>RabbitMQ</span><span>SignalR</span><span>Docker</span><span>PostgreSQL</span></div>
+          <h4>GYM System V2</h4>
+          <span class="card-type">Management Platform</span>
+          <p>Gym membership, class scheduling, billing, and attendance tracking — full-stack web app.</p>
+          <div class="card-tags"><span>ASP.NET</span><span>PostgreSQL</span><span>Tailwind</span>
+
+               <span>
+<a class="preview" href="javascript:void(0)" onclick="openGallery(this)" data-images="./Images/1/11.png,./Images/1/33.png,./Images/1/44.png,./Images/1/55.png,./Images/1/66.png">
+                Show Photos
+                <i class="fa fa-solid fa-image"></i>
+              </a>
+          </span>
+
+
+        </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="portfolio-card">
+        <div class="card-icon" style="background:#e8f0fd">
+          <img class="card-thumb" src="" alt="" onerror="this.style.display='none'">
+          ⚙️</div>
+        <div class="card-body">
+          <h4>JobFlow</h4>
+          <span class="card-type">Distributed Job Processing Platform<</span>
+          <p>Microservices with .NET 10 & RabbitMQ for async job processing. Live SignalR dashboard. Full Docker + PostgreSQL deployment.</p>
+           <div class="card-tags"><span>.NET 10</span><span>RabbitMQ</span><span>SignalR</span><span>Docker</span><span>PostgreSQL</span>
+                        <span>
+<a class="preview" href="javascript:void(0)" onclick="openGallery(this)"
+ data-images="./Images/2/77.jpeg,./Images/2/777.jpeg,./Images/2/7777.jpeg,./Images/2/77777.jpeg,./Images/2/777777.jpeg,./Images/2/7777777.jpeg">
+                Show Photos
+                <i class="fa fa-solid fa-image"></i>
+              </a>
+          </span>
+        </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="portfolio-card">
         <div class="card-icon" style="background:#fff8e1">📰</div>
         <div class="card-body">
@@ -484,11 +562,17 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 <strong>Zaki Mohammad</strong> &nbsp;|&nbsp; Software Engineer &nbsp;|&nbsp;
-      <a href="https://zakemohammad.github.io/Protofolio/" target="_blank">Portfolio</a>
-    </p>
+  <p id="footer-text">&copy; 2025 <strong>Zaki Mohammad</strong> &nbsp;|&nbsp; Software Engineer</p>
   </footer>
-
+  <div id="gallery-modal">
+    <div class="gallery-inner">
+      <button class="gallery-close" onclick="closeGallery()">&times;</button>
+      <button class="gallery-nav gallery-prev" onclick="galleryStep(-1)">&#10094;</button>
+      <img id="gallery-img" src="" alt="Project photo">
+      <button class="gallery-nav gallery-next" onclick="galleryStep(1)">&#10095;</button>
+      <div class="gallery-counter" id="gallery-counter"></div>
+    </div>
+  </div>
 </main>
 
 <script>
@@ -522,6 +606,49 @@
     links.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active');});
   });
   links.forEach(a=>a.addEventListener('click',()=>document.getElementById('sidebar').classList.remove('open')));
+
+
+const footer = document.getElementById('footer-text');
+footer.innerHTML = footer.innerHTML.replace('2025', new Date().getFullYear());
+    // PHOTO GALLERY
+  let galleryImages = [];
+  let galleryIndex = 0;
+  function openGallery(el){
+    const raw = el.getAttribute('data-images') || '';
+    galleryImages = raw.split(',').map(s=>s.trim()).filter(Boolean);
+    galleryIndex = 0;
+    const modal = document.getElementById('gallery-modal');
+    const img = document.getElementById('gallery-img');
+    const counter = document.getElementById('gallery-counter');
+    if(galleryImages.length === 0){
+      img.style.display='none';
+      counter.textContent = 'No photos added yet for this project.';
+    } else {
+      img.style.display='block';
+      img.src = galleryImages[0];
+      counter.textContent = (galleryIndex+1) + ' / ' + galleryImages.length;
+    }
+    modal.classList.add('open');
+  }
+  function closeGallery(){
+    document.getElementById('gallery-modal').classList.remove('open');
+  }
+  function galleryStep(dir){
+    if(galleryImages.length === 0) return;
+    galleryIndex = (galleryIndex + dir + galleryImages.length) % galleryImages.length;
+    document.getElementById('gallery-img').src = galleryImages[galleryIndex];
+    document.getElementById('gallery-counter').textContent = (galleryIndex+1) + ' / ' + galleryImages.length;
+  }
+  document.getElementById('gallery-modal').addEventListener('click', e=>{
+    if(e.target.id === 'gallery-modal') closeGallery();
+  });
+  document.addEventListener('keydown', e=>{
+    const modal = document.getElementById('gallery-modal');
+    if(!modal.classList.contains('open')) return;
+    if(e.key === 'Escape') closeGallery();
+    if(e.key === 'ArrowLeft') galleryStep(-1);
+    if(e.key === 'ArrowRight') galleryStep(1);
+  });
 </script>
 </body>
 </html>
